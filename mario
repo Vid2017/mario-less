@@ -1,0 +1,34 @@
+# recreating mario (less comfortable) in python
+
+import cs50
+import sys
+
+def main():
+
+    while True:
+        counter = input("Give me a positive int: ")
+        counter = int(counter)
+        if counter == 0:
+            return 0
+        if (counter <= 23) and (counter > 0):
+            break
+
+    temp2 = counter
+    space = temp2 - 2
+    brick = 2
+
+    while True:
+        #temp3 = space
+        if space >= 0:
+            for i in range(space + 1):
+                print(" ", end="")
+        print("#" * brick)
+        space -= 1
+        brick += 1
+        counter -= 1
+        if counter == 0:
+            break
+
+
+if __name__ == "__main__":
+    main()
